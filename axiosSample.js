@@ -15,6 +15,21 @@
 	})
 </script>
 
+//potongan kode
+function LihatAntrian() {
+	var xhr = new XMLHttpRequest();
+	var url = BASE_URL + "/ListAntrian";
+	//var url = "https://api.myjson.com/bins/b76f";
+	xhr.onreadystatechange = function() {
+		if (this.status == 200) {
+			document.getElementById("lihatantrian").innerHTML = this.responseText;
+		}
+	};
+	xhr.open("GET", url, true);
+	xhr.send();
+}
+
+
 //fetch data
 <div class="card">
 	<div class="header">
